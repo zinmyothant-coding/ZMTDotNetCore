@@ -1,0 +1,2 @@
+PM> Scaffold-DbContext "Data Source=(localdb)\MSSqlLocalDb;Initial Catalog=DotNetTrainingBatch4;Integrated Security=True;TrustServerCertificate=True;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context DotNetTrainingBatch4DbContext
+https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx

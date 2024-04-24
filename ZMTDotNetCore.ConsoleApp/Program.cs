@@ -39,7 +39,8 @@ Console.WriteLine("Hello, World!");
 //adoDotNetExample.Update(3,"title11", "author11", "content11");
 //adoDotNetExample.Edit(2);
 //adoDotNetExample.Delete(1);
-DrapperExample drapper=new DrapperExample();
-drapper.Run();
-
+//DrapperExample drapper=new DrapperExample();
+//drapper.Run();
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.Run();
 Console.ReadKey();

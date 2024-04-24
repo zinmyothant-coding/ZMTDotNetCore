@@ -14,7 +14,8 @@ internal static class ConnectionStrings
         DataSource = "(localdb)\\MSSqlLocalDb",//server name
         InitialCatalog = "DotNetTrainingBatch4",//database name
         UserID = "sa0",
-        Password = "sa@12345"
+        Password = "sa@12345",
+        TrustServerCertificate=true
 
     };
 
