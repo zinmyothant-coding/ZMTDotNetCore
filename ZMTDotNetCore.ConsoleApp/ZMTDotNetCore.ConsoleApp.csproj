@@ -19,4 +19,8 @@
     <PackageReference Include="System.Runtime" Version="4.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ZMTDotNetCore.Shared\ZMTDotNetCore.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using ZMTDotNetCore.ConsoleApp.Dtos;
 using ZMTDotNetCore.ConsoleApp.Services;
+using ZMTDotNetCore.Shared;
 
 namespace ZMTDotNetCore.ConsoleApp.DapperExamples
 {
     internal class DapperExample
     {
+        private readonly DrapperService drapperService = new DrapperService(ConnectionStrings.connectionStrings.ConnectionString);
         public void Run()
         {
             Read();
@@ -27,7 +29,7 @@ namespace ZMTDotNetCore.ConsoleApp.DapperExamples
         {
             using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.connectionStrings.ConnectionString);
 
-            List<BlogDto> lst = dbConnection.Query<BlogDto>("select * from Tbl_Blog").ToList();
+            List<BlogDto> lst = drapperService.Query<BlogDto>("select * from Tbl_Blog");
             foreach (BlogDto item in lst)
             {
                 Console.WriteLine(item.BlogAuthor);
@@ -40,8 +42,7 @@ namespace ZMTDotNetCore.ConsoleApp.DapperExamples
         }
         public void Edit(int Id)
         {
-            using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.connectionStrings.ConnectionString);
-            var item = dbConnection.Query("select * from Tbl_Blog where BlogId=@BlogId", new BlogDto { BlogId = Id }).FirstOrDefault();
+            var item = drapperService.QueryFirstOrDefault<BlogDto>("select * from Tbl_Blog where BlogId=@BlogId", new BlogDto { BlogId = Id });
             if (item is null)
             {
                 Console.WriteLine("No Data Found");
@@ -73,7 +74,7 @@ namespace ZMTDotNetCore.ConsoleApp.DapperExamples
            , @BlogAuthor
            ,@BlogContent );";
             using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.connectionStrings.ConnectionString);
-            int result = dbConnection.Execute(query, item);
+            int result = drapperService.Excute<BlogDto>(query, item);
             string message = result > 0 ? "Save Successfully! " : "Save Fail!";
             Console.WriteLine(message);
         }
@@ -91,7 +92,7 @@ namespace ZMTDotNetCore.ConsoleApp.DapperExamples
             string query = @"Update Tbl_Blog set [BlogTitle]=@BlogTitle,[BlogAuthor]=@BlogAuthor,[BlogContent]=@BlogContent where BlogId=@BlogId;";
 
             using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.connectionStrings.ConnectionString);
-            int result = dbConnection.Execute(query, item);
+            int result = drapperService.Excute<BlogDto>(query, item);
             string message = result > 0 ? "Updated Successfully! " : "Updated Fail!";
             Console.WriteLine(message);
         }
@@ -103,7 +104,7 @@ namespace ZMTDotNetCore.ConsoleApp.DapperExamples
             };
             string query = "DELETE Tbl_Blog where BlogId=@BlogId";
             using IDbConnection dbConnection = new SqlConnection(ConnectionStrings.connectionStrings.ConnectionString);
-            int result = dbConnection.Execute(query, item);
+            int result = drapperService.Excute<BlogDto>(query, item);
             Console.WriteLine(result > 0 ? "Delete Successfully!" : "Delete Fail!");
         }
     }
