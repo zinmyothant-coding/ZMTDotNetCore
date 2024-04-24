@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ZMTDotNetCore.ConsoleApp
 {
-    internal class DrapperExample
+    internal class DapperExample
     {
         public void Run() 
         {
