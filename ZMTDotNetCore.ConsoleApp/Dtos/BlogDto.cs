@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZMTDotNetCore.ConsoleApp;
+namespace ZMTDotNetCore.ConsoleApp.Dtos;
 [Table("Tbl_Blog")]
 internal class BlogDto
 {

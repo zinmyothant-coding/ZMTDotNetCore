@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace ZMTDotNetCore.ConsoleApp
+namespace ZMTDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     public class AdoDotNetExample
     {

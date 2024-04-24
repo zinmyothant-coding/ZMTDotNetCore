@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZMTDotNetCore.ConsoleApp;
+namespace ZMTDotNetCore.ConsoleApp.Services;
 
 internal static class ConnectionStrings
 {
@@ -15,7 +15,7 @@ internal static class ConnectionStrings
         InitialCatalog = "DotNetTrainingBatch4",//database name
         UserID = "sa0",
         Password = "sa@12345",
-        TrustServerCertificate=true
+        TrustServerCertificate = true
 
     };
 
