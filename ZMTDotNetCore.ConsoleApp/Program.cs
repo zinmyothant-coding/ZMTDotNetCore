@@ -33,10 +33,13 @@ Console.WriteLine("Hello, World!");
 //}
 //ADO.Net Read
 //CRUD
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
-adoDotNetExample.Read();
-adoDotNetExample.Create(3,"title1","author1","content1");
-adoDotNetExample.Update(3,"title11", "author11", "content11");
-adoDotNetExample.Edit(2);
-adoDotNetExample.Delete(1);
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//adoDotNetExample.Read();
+//adoDotNetExample.Create(3,"title1","author1","content1");
+//adoDotNetExample.Update(3,"title11", "author11", "content11");
+//adoDotNetExample.Edit(2);
+//adoDotNetExample.Delete(1);
+DrapperExample drapper=new DrapperExample();
+drapper.Run();
+
 Console.ReadKey();
