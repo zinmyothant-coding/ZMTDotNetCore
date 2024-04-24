@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{D7
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.RestApi", "ZMTDotNetCore.RestApi\ZMTDotNetCore.RestApi.csproj", "{553B9EBA-87C1-4321-9C02-C7EB3C045307}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7F385724-EF32-4662-A0CA-B350929C311E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F385724-EF32-4662-A0CA-B350929C311E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F385724-EF32-4662-A0CA-B350929C311E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{553B9EBA-87C1-4321-9C02-C7EB3C045307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553B9EBA-87C1-4321-9C02-C7EB3C045307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553B9EBA-87C1-4321-9C02-C7EB3C045307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{553B9EBA-87C1-4321-9C02-C7EB3C045307}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
