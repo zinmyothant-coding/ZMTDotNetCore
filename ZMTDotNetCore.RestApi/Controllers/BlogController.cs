@@ -32,8 +32,9 @@ namespace ZMTDotNetCore.RestApi.Controllers
                 return NotFound();
             }
             return Ok(item);
-        }
+        } 
         [HttpPost]
+       // [Route("Create")]
         public IActionResult Create(BlogModel blog)
         {
             _context.Blog.Add(blog);
@@ -85,6 +86,7 @@ namespace ZMTDotNetCore.RestApi.Controllers
             return Ok(message); 
         }
         [HttpDelete("{id}")]
+       
         public IActionResult Delete(int id)
         {
             var item = _context.Blog.FirstOrDefault(x => x.BlogId == id);
