@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.ConsoleAppRes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.PizzaApi", "ZMTDotNetCore.PizzaApi\ZMTDotNetCore.PizzaApi.csproj", "{12AF22B4-B335-45C1-8566-649745B6D0E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.RefitExamples", "ZMTDotNetCore.RefitExamples\ZMTDotNetCore.RefitExamples.csproj", "{C51F211F-0B32-41B3-BF00-CF89264B63FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.RefitExamples", "ZMTDotNetCore.RefitExamples\ZMTDotNetCore.RefitExamples.csproj", "{C51F211F-0B32-41B3-BF00-CF89264B63FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.WinFormsApp", "ZMTDotNetCore.WinFormsApp\ZMTDotNetCore.WinFormsApp.csproj", "{6C254EF8-7434-4448-892A-AF84F91CA66B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{C51F211F-0B32-41B3-BF00-CF89264B63FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C51F211F-0B32-41B3-BF00-CF89264B63FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C51F211F-0B32-41B3-BF00-CF89264B63FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
