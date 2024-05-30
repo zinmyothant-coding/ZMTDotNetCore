@@ -25,7 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.PizzaApi", "Z
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.RefitExamples", "ZMTDotNetCore.RefitExamples\ZMTDotNetCore.RefitExamples.csproj", "{C51F211F-0B32-41B3-BF00-CF89264B63FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.WinFormsApp", "ZMTDotNetCore.WinFormsApp\ZMTDotNetCore.WinFormsApp.csproj", "{6C254EF8-7434-4448-892A-AF84F91CA66B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.WinFormsApp", "ZMTDotNetCore.WinFormsApp\ZMTDotNetCore.WinFormsApp.csproj", "{6C254EF8-7434-4448-892A-AF84F91CA66B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.NLayer.UI", "ZMTDotNetCore.NLayer.UI\ZMTDotNetCore.NLayer.UI.csproj", "{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.NLayer.BusinessLogic", "ZMTDotNetCore.NLayer.BusinessLogic\ZMTDotNetCore.NLayer.BusinessLogic.csproj", "{86408CD7-D4ED-4308-8462-65E1676684BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.NLayer.DataAccess", "ZMTDotNetCore.NLayer.DataAccess\ZMTDotNetCore.NLayer.DataAccess.csproj", "{47E9FB34-6007-4A0B-A519-0F903C03187E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +75,18 @@ Global
 		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C254EF8-7434-4448-892A-AF84F91CA66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86408CD7-D4ED-4308-8462-65E1676684BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86408CD7-D4ED-4308-8462-65E1676684BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86408CD7-D4ED-4308-8462-65E1676684BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86408CD7-D4ED-4308-8462-65E1676684BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
