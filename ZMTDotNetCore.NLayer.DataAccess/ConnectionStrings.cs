@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.Data.SqlClient;
+
 namespace ZMTDotNetCore.RestApiWithNLayer;
 
 internal static class ConnectionStrings
