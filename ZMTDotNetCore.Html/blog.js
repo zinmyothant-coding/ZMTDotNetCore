@@ -62,11 +62,12 @@ function UpdateBlog(id, title, author, content) {
     getBlogTable();
 }
 function DeleteBlog(id) {
-    let lst = getBlogs();
-    const data = lst.filter(s => s.id !== id);
-    let jsonStr = JSON.stringify(data);
-    localStorage.setItem(blog, jsonStr);
-    getBlogTable();
+    confirmMessage(id);
+    // let lst = getBlogs();
+    // const data = lst.filter(s => s.id !== id);
+    // let jsonStr = JSON.stringify(data);
+    // localStorage.setItem(blog, jsonStr);
+    // getBlogTable();
 }
 function uuidv4() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
@@ -86,7 +87,7 @@ $('#btnSave').click(function () {
         UpdateBlog(blogid, title, author, content);
         blogid = null;
     }
-    SuccessMessageBox('Save Successfully');
+    successMessage('Save Successfully');
     $('#txtTitle').val('');
     $('#txtAuthor').val('');
     $('#txtContent').val('');
@@ -111,9 +112,9 @@ function getBlogTable() {
     });
     $('#tblbody').html(htmlRows);
 }
-function SuccessMessageBox(message) {
-    alert(message);
-}
-function ErrorMessageBox(message) {
-    alert(message);
-}
+// function SuccessMessageBox(message) {
+//     alert(message);
+// }
+// function ErrorMessageBox(message) {
+//     alert(message);
+// }
