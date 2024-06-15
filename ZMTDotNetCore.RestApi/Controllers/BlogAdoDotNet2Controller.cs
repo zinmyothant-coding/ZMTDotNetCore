@@ -14,7 +14,14 @@ namespace ZMTDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogAdoDotNet2Controller : ControllerBase
     {
-        private readonly AdoDotNetService adoDotNetService = new AdoDotNetService(ConnectionStrings.connectionStrings.ConnectionString);
+     
+        private readonly AdoDotNetService adoDotNetService;
+
+        public BlogAdoDotNet2Controller(AdoDotNetService adoDotNetService)
+        {
+            this.adoDotNetService = adoDotNetService;
+        }
+
         [HttpGet]
         public IActionResult GetBlogs()
         {

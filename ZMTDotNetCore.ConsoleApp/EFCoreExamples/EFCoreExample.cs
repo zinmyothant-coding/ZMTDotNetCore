@@ -9,7 +9,13 @@ namespace ZMTDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
-        private readonly AddDbContent db = new AddDbContent();
+       private readonly AddDbContent db;
+
+        public EFCoreExample(AddDbContent content)
+        {
+            db = content;
+        }
+
         public void Run()
         {
             Read();

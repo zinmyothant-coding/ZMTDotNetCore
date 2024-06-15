@@ -9,12 +9,16 @@ using ZMTDotNetCore.ConsoleApp.Services;
 
 namespace ZMTDotNetCore.ConsoleApp.EFCoreExamples
 {
-    internal class AddDbContent : DbContext
+    public class AddDbContent : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AddDbContent(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(ConnectionStrings.connectionStrings.ConnectionString);
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(ConnectionStrings.connectionStrings.ConnectionString);
+        //}
         public DbSet<BlogDto> Blog { get; set; }
     }
 }

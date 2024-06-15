@@ -8,12 +8,12 @@ using ZMTDotNetCore.RestApi.Model;
 
 namespace ZMTDotNetCore.RestApi.Db
 {
-    internal class AddDbContent : DbContext
+    public class AddDbContent : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AddDbContent(DbContextOptions options) : base(options)
         {
-            optionsBuilder.UseSqlServer(ConnectionStrings.connectionStrings.ConnectionString);
         }
+
         public DbSet<BlogModel> Blog { get; set; }
     }
 }

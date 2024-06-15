@@ -1,7 +1,12 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System.Data;
 using System.Data.SqlClient;
+using ZMTDotNetCore.ConsoleApp.AdoDotNetExamples;
 using ZMTDotNetCore.ConsoleApp.EFCoreExamples;
+using ZMTDotNetCore.ConsoleApp.Services;
+using ZMTDotNetCore.Shared;
 
 
 Console.WriteLine("Hello, World!");
@@ -41,6 +46,19 @@ Console.WriteLine("Hello, World!");
 //adoDotNetExample.Delete(1);
 //DapperExample drapper=new DapperExample();
 //drapper.Run();
-EFCoreExample eFCoreExample = new EFCoreExample();
-eFCoreExample.Run();
+//EFCoreExample eFCoreExample = new EFCoreExample();
+//eFCoreExample.Run(); 
+var service = new ServiceCollection()
+    .AddScoped(n=>new AdoDotNetExample(ConnectionStrings.connectionStrings))
+    .AddScoped(n=>new DrapperService(ConnectionStrings.connectionStrings.ConnectionString))
+    .AddDbContext<AddDbContent>(opt =>
+{
+    opt.UseSqlServer(ConnectionStrings.connectionStrings.ConnectionString);
+},ServiceLifetime.Transient,ServiceLifetime.Transient)
+     .AddScoped<EFCoreExample>()
+    .BuildServiceProvider();
+
+var db =service.GetRequiredService<EFCoreExample>();
+db.Read();
+AdoDotNetExample db1 =service.GetRequiredService<AdoDotNetExample>();
 Console.ReadKey();

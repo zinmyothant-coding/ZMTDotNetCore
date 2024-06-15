@@ -14,7 +14,13 @@ namespace ZMTDotNetCore.RestApi.Controllers
     [ApiController]
     public class BlogDapper2Controller : ControllerBase
     {
-        private DrapperService _drapperService=new DrapperService(ConnectionStrings.connectionStrings.ConnectionString);
+        private readonly DrapperService _drapperService;
+
+        public BlogDapper2Controller(DrapperService drapperService)
+        {
+            _drapperService = drapperService;
+        }
+
         [HttpGet]
         public IActionResult GetBlogs()
         {

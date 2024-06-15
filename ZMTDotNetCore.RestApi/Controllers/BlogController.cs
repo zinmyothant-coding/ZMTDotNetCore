@@ -12,10 +12,13 @@ namespace ZMTDotNetCore.RestApi.Controllers
     public class BlogController : ControllerBase
     {
         private readonly AddDbContent _context;
-        public BlogController()
+
+        public BlogController(AddDbContent context)
         {
-            _context = new AddDbContent();
+            _context = context;
         }
+
+       
         [HttpGet]
         public IActionResult Read()
         {

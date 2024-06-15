@@ -5,27 +5,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ZMTDotNetCore.ConsoleApp.Services;
 
 namespace ZMTDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     public class AdoDotNetExample
     {
-        private readonly SqlConnectionStringBuilder stringBuilder = new SqlConnectionStringBuilder()
+        private readonly SqlConnectionStringBuilder ConnectionString;
+
+        public AdoDotNetExample(SqlConnectionStringBuilder ConnectionString)
         {
-            DataSource = "(localdb)\\MSSqlLocalDb",//server name
-            InitialCatalog = "DotNetTrainingBatch4",//database name
-            UserID = "sa0",
-            Password = "sa@12345"
-        };
+            ConnectionString = ConnectionString;
+        }
+
 
         //public AdoDotNetExample()
         // {
         //     stringBuilder = new SqlConnectionStringBuilder();
-        //     stringBuilder.ConnectionString = "Data Source=(localdb)\\MSSqlLocalDb;Initial Catalog=DotNetTrainingBatch4;User ID=sa0;Password=sa@12345;";
+        //     ConnectionString = "Data Source=(localdb)\\MSSqlLocalDb;Initial Catalog=DotNetTrainingBatch4;User ID=sa0;Password=sa@12345;";
         // }
         public void Read()
         {
-            SqlConnection connection = new SqlConnection(stringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(ConnectionString.ConnectionString);
             connection.Open();
             Console.WriteLine("Connection Open");
             string query = "select * from Tbl_Blog";
@@ -49,7 +50,7 @@ namespace ZMTDotNetCore.ConsoleApp.AdoDotNetExamples
         }
         public void Create(int id, string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection(stringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(ConnectionString.ConnectionString);
             connection.Open();
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([BlogId],
@@ -73,7 +74,7 @@ namespace ZMTDotNetCore.ConsoleApp.AdoDotNetExamples
         }
         public void Edit(int id)
         {
-            SqlConnection connection = new SqlConnection(stringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(ConnectionString.ConnectionString);
             connection.Open();
             string query = "select * from Tbl_Blog where BlogId=@Id";
             SqlCommand command = new SqlCommand(query, connection);
@@ -96,7 +97,7 @@ namespace ZMTDotNetCore.ConsoleApp.AdoDotNetExamples
         }
         public void Delete(int id)
         {
-            SqlConnection connection = new SqlConnection(stringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(ConnectionString.ConnectionString);
             connection.Open();
             string query = "DELETE Tbl_Blog where BlogId=@Id";
             SqlCommand cmd = new SqlCommand(query, connection);
@@ -107,7 +108,7 @@ namespace ZMTDotNetCore.ConsoleApp.AdoDotNetExamples
         }
         public void Update(int id, string title, string author, string content)
         {
-            SqlConnection connection = new SqlConnection(stringBuilder.ConnectionString);
+            SqlConnection connection = new SqlConnection(ConnectionString.ConnectionString);
             connection.Open();
             string query = @"Update Tbl_Blog set [BlogTitle]=@BlogTitle,[BlogAuthor]=@BlogAuthor,[BlogContent]=@BlogContent where BlogId=@Id;";
             SqlCommand cmd = new SqlCommand(query, connection);
