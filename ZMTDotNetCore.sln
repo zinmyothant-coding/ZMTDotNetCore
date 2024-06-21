@@ -27,11 +27,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.RefitExamples
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.WinFormsApp", "ZMTDotNetCore.WinFormsApp\ZMTDotNetCore.WinFormsApp.csproj", "{6C254EF8-7434-4448-892A-AF84F91CA66B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.NLayer.UI", "ZMTDotNetCore.NLayer.UI\ZMTDotNetCore.NLayer.UI.csproj", "{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.NLayer.UI", "ZMTDotNetCore.NLayer.UI\ZMTDotNetCore.NLayer.UI.csproj", "{FFC876A8-BAAA-40C1-A7E7-D9EC41365E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.NLayer.BusinessLogic", "ZMTDotNetCore.NLayer.BusinessLogic\ZMTDotNetCore.NLayer.BusinessLogic.csproj", "{86408CD7-D4ED-4308-8462-65E1676684BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.NLayer.BusinessLogic", "ZMTDotNetCore.NLayer.BusinessLogic\ZMTDotNetCore.NLayer.BusinessLogic.csproj", "{86408CD7-D4ED-4308-8462-65E1676684BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.NLayer.DataAccess", "ZMTDotNetCore.NLayer.DataAccess\ZMTDotNetCore.NLayer.DataAccess.csproj", "{47E9FB34-6007-4A0B-A519-0F903C03187E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMTDotNetCore.NLayer.DataAccess", "ZMTDotNetCore.NLayer.DataAccess\ZMTDotNetCore.NLayer.DataAccess.csproj", "{47E9FB34-6007-4A0B-A519-0F903C03187E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZMTDotNetCore.MinimalApi", "ZMTDotNetCore.MinimalApi\ZMTDotNetCore.MinimalApi.csproj", "{FBC82F9A-CCC8-4ECE-8754-0872E8EE7139}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47E9FB34-6007-4A0B-A519-0F903C03187E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC82F9A-CCC8-4ECE-8754-0872E8EE7139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC82F9A-CCC8-4ECE-8754-0872E8EE7139}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC82F9A-CCC8-4ECE-8754-0872E8EE7139}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC82F9A-CCC8-4ECE-8754-0872E8EE7139}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
